@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
@@ -15,7 +14,6 @@ import android.os.Handler;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
-import androidx.core.internal.view.SupportMenu;
 import androidx.core.view.ViewCompat;
 import java.util.Random;
 
@@ -44,7 +42,6 @@ public class GameView extends View {
     Random random;
     Runnable runnable;
     SharedPreferences sharedPreferences;
-    Paint textPaint =new Paint();
     Velocity velocity = new Velocity(25, 32);
 
     public GameView(Context context2) {
@@ -121,8 +118,8 @@ public class GameView extends View {
             points++;
         }
         canvas.drawBitmap(background21,null,rect,null);
-        canvas.drawBitmap(ball, ballX, ballY, (Paint) null);
-        canvas.drawBitmap(paddle, paddleX, paddleY, (Paint) null);
+        canvas.drawBitmap(ball, ballX, ballY,  null);
+        canvas.drawBitmap(paddle, paddleX, paddleY,  null);
         handler.postDelayed(runnable, 30);
 
     }
