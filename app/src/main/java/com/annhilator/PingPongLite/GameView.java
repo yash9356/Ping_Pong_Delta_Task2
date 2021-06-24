@@ -18,8 +18,6 @@ import androidx.core.view.ViewCompat;
 import java.util.Random;
 
 public class GameView extends View {
-    float TEXT_SIZE = 120.0f;
-    final long UPDATE_MILLIS = 30;
     Boolean audioState;
     Bitmap ball;
     float ballX;
