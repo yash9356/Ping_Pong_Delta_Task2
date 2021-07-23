@@ -7,10 +7,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GameOver extends AppCompatActivity {
     SharedPreferences sharedPreferences;
+    boolean won;
     TextView tvHighest;
     TextView tvPoints;
 
@@ -23,6 +26,10 @@ public class GameOver extends AppCompatActivity {
         tvPoints = (TextView) findViewById(R.id.tvPoints);
         tvHighest = (TextView) findViewById(R.id.tvHighest);
         int i = getIntent().getExtras().getInt("points");
+        won =getIntent().getBooleanExtra("won",false);
+        if(won){
+            Toast.makeText(GameOver.this,"You Won!",Toast.LENGTH_SHORT).show();
+        }
         TextView textView = tvPoints;
         textView.setText(Integer.toString(i) );
         SharedPreferences sharedPreferences2 = getSharedPreferences("my_pref", 0);

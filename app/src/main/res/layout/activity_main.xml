@@ -10,9 +10,10 @@
 
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="84dp"
         android:src="@drawable/ping_gif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -20,17 +21,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/play_nor"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@android:color/black"
         android:onClick="startGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769"
+        app:layout_constraintVertical_bias="0.636"
         app:srcCompat="@drawable/ic_play_arrow"
         tools:ignore="VectorDrawableCompat" />
 
@@ -42,11 +43,88 @@
         android:onClick="audioPref"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.763"
         app:srcCompat="@drawable/ic_volume_up"
         tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/play_hacker"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="49dp"
+        android:background="#050505"
+        android:onClick="startGameHack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_nor"
+        app:srcCompat="@drawable/ic_play34"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="NORMAL"
+        android:textColor="#FDFCFC"
+        android:textSize="20dp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_nor" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:text="HACKER++"
+        android:textColor="#FFFDFD"
+        android:textSize="20dp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_hacker" />
+
+    <Button
+        android:id="@+id/easy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="startGameH1"
+        android:text="easy"
+        app:layout_constraintStart_toEndOf="@+id/play_hacker"
+        app:layout_constraintTop_toTopOf="@+id/play_hacker" />
+
+    <Button
+        android:id="@+id/hard2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:onClick="startGameH2"
+        android:text="hard"
+        app:layout_constraintStart_toEndOf="@+id/play_hacker"
+        app:layout_constraintTop_toBottomOf="@+id/easy2" />
+
+    <Button
+        android:id="@+id/easy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="startGame1"
+        android:text="easy"
+        app:layout_constraintStart_toEndOf="@+id/play_nor"
+        app:layout_constraintTop_toTopOf="@+id/play_nor" />
+
+    <Button
+        android:id="@+id/hard1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:onClick="startGame2"
+        android:text="hard"
+        app:layout_constraintStart_toEndOf="@+id/play_nor"
+        app:layout_constraintTop_toBottomOf="@+id/easy1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
